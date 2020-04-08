@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.firstapp"
+        applicationId "com.counter"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
