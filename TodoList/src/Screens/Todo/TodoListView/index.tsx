@@ -5,16 +5,17 @@ import Header from './Header';
 import TodoList from './TodoList';
 
 const Container = Styled.SafeAreaView`
-    flex: 1;
+  flex: 1;
 `;
 
-const TodoListView = ({ }: Props) => {
-    return(
-        <Container>
-            <Header />
-            <TodoListView />
-        </Container>
-    ); 
-};
+interface Props {}
 
+const TodoListView = ({  }: Props) => {
+  return (
+    <Container>
+      <Header />
+      <TodoList />
+    </Container>
+  );
+};
 export default TodoListView;
