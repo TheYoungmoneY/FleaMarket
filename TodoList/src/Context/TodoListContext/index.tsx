@@ -7,11 +7,11 @@ interface Props {
 
 const TodoListContext = createContext<ITodoListContext>({
     todoList: [],
-    addTodoList: (todo: string): void => {};
-    removeTodoList: (index: number): void => {};
+    addTodoList: (todo: string): void => {},
+    removeTodoList: (index: number): void => {},
 });
 
-const TodoListContextProvider = ({children: Props}) => {
+const TodoListContextProvider = ({children} : Props) => {
     const [todoList, setTodoList] = useState<Array<string>>([]);
 
     const addTodoList = (todo: string): void => {
