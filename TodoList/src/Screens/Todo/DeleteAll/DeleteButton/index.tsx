@@ -8,9 +8,14 @@ const Container = Styled.SafeAreaView`
   justify-content: flex-end;
 `;
 const ButtonContainer = Styled.TouchableOpacity`
-  box-shadow: 8px 8px 16px #999;
+  box-shadow: 4px 4px 8px #999;
 `;
-const Icon = Styled.Image``;
+const Icon = Styled.Image`
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  margin-left: 20px;
+`;
 
 interface Props {
   onPress?: () => void;
