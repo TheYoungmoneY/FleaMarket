@@ -9,6 +9,7 @@ const TodoListContext = createContext<ITodoListContext>({
   todoList: [],
   addTodoList: (todo: string): void => {},
   removeTodoList: (index: number): void => {},
+  deleteTodoList: (): void => {},
 });
 
 const TodoListContextProvider = ({ children }: Props) => {
@@ -23,6 +24,13 @@ const TodoListContextProvider = ({ children }: Props) => {
   const removeTodoList = (index: number): void => {
     let list = [...todoList];
     list.splice(index, 1);
+    setTodoList(list);
+    AsyncStorage.setItem('todoList', JSON.stringify(list));
+  };
+
+  const deleteTotoList = (): void =>{
+    let list = [...todoList];
+    list.splice(0, list.length);
     setTodoList(list);
     AsyncStorage.setItem('todoList', JSON.stringify(list));
   };
@@ -48,6 +56,7 @@ const TodoListContextProvider = ({ children }: Props) => {
         todoList,
         addTodoList,
         removeTodoList,
+        deleteTotoList,
       }}>
       {children}
     </TodoListContext.Provider>

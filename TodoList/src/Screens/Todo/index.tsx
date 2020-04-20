@@ -3,6 +3,7 @@ import Styled from 'styled-components/native';
 
 import TodoListView from './TodoListView';
 import AddTodo from './AddTodo';
+import DeleteAll from './DeleteAll';
 
 const Container = Styled.View`
   flex: 1;
@@ -15,7 +16,8 @@ const Todo = ({  }: Props) => {
     <Container>
       <TodoListView />
       <AddTodo />
-    </Container>
+      <DeleteAll />
+  </Container>
   );
 };
 export default Todo;

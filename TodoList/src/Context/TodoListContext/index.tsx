@@ -27,6 +27,13 @@ const TodoListContextProvider = ({ children }: Props) => {
     AsyncStorage.setItem('todoList', JSON.stringify(list));
   };
 
+  const deleteTodoList = (): void =>{
+    let list = [...todoList];
+    list.splice(0, list.length);
+    setTodoList(list);
+    AsyncStorage.setItem('todoList', JSON.stringify(list));
+  };
+
   const initData = async () => {
     try {
       const list = await AsyncStorage.getItem('todoList');
@@ -48,6 +55,7 @@ const TodoListContextProvider = ({ children }: Props) => {
         todoList,
         addTodoList,
         removeTodoList,
+        deleteTodoList,
       }}>
       {children}
     </TodoListContext.Provider>
