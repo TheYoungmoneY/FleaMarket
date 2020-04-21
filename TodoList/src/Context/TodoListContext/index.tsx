@@ -9,6 +9,7 @@ const TodoListContext = createContext<ITodoListContext>({
   todoList: [],
   addTodoList: (todo: string): void => {},
   removeTodoList: (index: number): void => {},
+  deleteTodoList: (): void => {},
 });
 
 const TodoListContextProvider = ({ children }: Props) => {
@@ -37,6 +38,7 @@ const TodoListContextProvider = ({ children }: Props) => {
   const initData = async () => {
     try {
       const list = await AsyncStorage.getItem('todoList');
+      console.log(list.length);
       if (list !== null) {
         setTodoList(JSON.parse(list));
       }

@@ -5,7 +5,7 @@ import { TodoListContext } from '~/Context/TodoListContext';
 
 const Input = Styled.TextInput`
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color: #FFF;
   padding: 0px 8px;
 `;
