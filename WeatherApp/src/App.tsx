@@ -1,21 +1,19 @@
 import React from 'react';
 import Styled from 'styled-components/native';
-
-import TodoListView from './TodoListView';
-import AddTodo from './AddTodo';
+import WeatherView from '~/Screens/WeatherView'
 
 const Container = Styled.View`
   flex: 1;
+  background-color: #EEE;
 `;
 
 interface Props {}
 
-const Todo = ({  }: Props) => {
+const App = ({ }: Props) => {
   return (
     <Container>
-      <TodoListView />
-      <AddTodo />
+      <WeatherView/>
     </Container>
   );
 };
-export default Todo;
+export default App;

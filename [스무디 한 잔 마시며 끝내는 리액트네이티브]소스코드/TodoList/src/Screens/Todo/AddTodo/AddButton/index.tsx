@@ -7,7 +7,6 @@ const Container = Styled.SafeAreaView`
   align-self: center;
   justify-content: flex-end;
 `;
-
 const ButtonContainer = Styled.TouchableOpacity`
   box-shadow: 4px 4px 8px #999;
 `;
